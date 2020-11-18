@@ -146,6 +146,7 @@ with open("../README.md", "w", encoding="utf-8") as f:
 
 	f.write(file)
 
+print(f'::set-output name=TIMESTAMP::{time.strftime("%Y-%m-%dT%H:%M:%S%z", time.localtime())}')
 
 # add_line("### Last five commits")
 # add_line("")
