@@ -34,7 +34,6 @@ jobs:
       - name: Build README.md
         id: build
         run: |
-          cd src
           python src/main.py
       - name: Commit changes
         uses: EndBug/add-and-commit@v4 
