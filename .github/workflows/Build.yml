@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -27,14 +27,15 @@ jobs:
               ${{ runner.os }}-pip-
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r src/requirements.txt
+          pip3 install -r src/requirements.txt
       - name: Set date
         run: Write-Host "::set-output name=TIMESTAMP::$(Get-Date -Format o)"
       - name: Build README.md
         id: build
         run: |
-          python src/main.py
+          ls
+          python3 src/main.py
+          ls
       - name: Commit changes
         uses: EndBug/add-and-commit@v4 
         with:
