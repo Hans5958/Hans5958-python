@@ -33,7 +33,6 @@ jobs:
       - name: Build README.md
         id: build
         run: |
-          ls
           python3 src/main.py
           ls
       - name: Commit changes
