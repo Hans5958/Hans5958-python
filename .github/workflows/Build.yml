@@ -35,7 +35,7 @@ jobs:
         id: build
         run: |
           cd src
-          python main.py
+          python src/main.py
       - name: Commit changes
         uses: EndBug/add-and-commit@v4 
         with:
